@@ -25,7 +25,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       # Target site/domain for XMIT deploy
-      XMIT_SITE: wildglobalization
+      XMIT_SITE: wildglobalization.xmit.dev
     steps:
       - name: Checkout
         uses: actions/checkout@v5
