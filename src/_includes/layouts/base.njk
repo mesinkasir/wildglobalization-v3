@@ -63,7 +63,6 @@
 <link rel="icon" href="{{ settings.favicon }}" sizes="180x180">
  <link rel="apple-touch-icon" href="{{ settings.favicon }}">
 	{% block head %}{% endblock %}
-	<link rel="stylesheet" href="/assets/css/index.css">
 	</head>
 	<body class="{{ bodyClass | default('site-page') }}">
 		<a class="skip-link" href="#content">Skip to content</a>
@@ -153,6 +152,5 @@
   </div>
   <p class="footer-bottom">&copy; {{ currentYear }} {{ footer.copyright.owner }}. {{ footer.copyright.rights }}</p>
 </footer>
-		<script src="/assets/js/index.js" defer></script>
 	</body>
 </html>

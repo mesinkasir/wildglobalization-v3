@@ -157,9 +157,9 @@ eleventyConfig.addFilter('readableDate', (date) => {
 	eleventyConfig.addFilter('excerpt', excerpt);
 	eleventyConfig.addFilter('plainText', decodeEntities);
 	eleventyConfig.addFilter('dateToRfc3339', (date) => {
-  if (!date) return '';
-  let dt = DateTime.fromJSDate(new Date(date));
-  return dt.isValid ? dt.toISO() : '';
+		if (!date) return '';
+		const dt = new Date(date);
+		return Number.isNaN(dt.getTime()) ? '' : dt.toISOString();
 });
 	eleventyConfig.addFilter('dateToRfc822', (date) => new Date(date).toUTCString());
 	eleventyConfig.addFilter('json', (value) => JSON.stringify(value));
