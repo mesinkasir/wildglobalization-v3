@@ -15,7 +15,7 @@
     "@11ty/eleventy": "3.1.6",
     "@11ty/eleventy-img": "6.0.4",
     "@11ty/eleventy-plugin-rss": "3.0.0",
-    "@apleasantview/eleventy-plugin-baseline": "file:../eleventy-plugin-baseline/_baseline"
+    "@apleasantview/eleventy-plugin-baseline": "^0.1.0-next.42"
   },
   "dependencies": {
     "dotenv": "17.4.2",
