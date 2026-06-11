@@ -2,3 +2,7 @@ node_modules/
 dist/
 .cache/
 .DS_Store
+_site
+package-lock.json
+yarn.lock
+.env

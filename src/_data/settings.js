@@ -7,6 +7,7 @@ export default {
 		'A pan-historical exploration of ecology, culture, technology, economy, and governance as wild forces shaping civilization.',
 	url: siteUrl,
 	noindex: false,
+	favicon: '/assets/img/favicon-180.png',
 	defaultLanguage: 'en',
 	author: {
 		name: 'The Wild Globalization Project',

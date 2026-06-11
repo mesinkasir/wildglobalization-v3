@@ -8,6 +8,9 @@
 		{% endif %}
 		<h1>{{ title }}</h1>
 		<div class="content-card">
+			{% if show_toc %}
+				{{ content | toc | safe }}
+			{% endif %}
 			{{ content | safe }}
 		</div>
 	</div>

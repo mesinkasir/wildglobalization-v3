@@ -2,15 +2,15 @@
 
 {% block content %}
 <section class="hero">
-	<img class="hero__image" src="{{ home.images.hero }}" alt="Global network visualization">
+	<img class="hero__image" src="{{ hero.image }}" alt="{{ hero.imageAlt }}">
 	<div class="hero__shade"></div>
 	<div class="section-inner hero__content">
-		<p class="eyebrow"><span></span> New Book - Available Now</p>
-		<h1>Wild <span>Globalization</span></h1>
-		<p class="hero__dek">A pan-historical exploration of the five wild forces - Ecology, Culture, Technology, Economy, and Governance - that drive and produce our hyper-globalizing civilization. It's wild.</p>
+		<p class="eyebrow"><span></span> {{ hero.eyebrow }}</p>
+		<h1>{{ hero.title | safe }}</h1>
+		<p class="hero__dek">{{ hero.dek }}</p>
 		<div class="actions">
-			<a class="button" href="https://wildglobalization.com/" rel="noopener noreferrer">Get Your Copy</a>
-			<a class="button button--secondary" href="#book">Explore the Book</a>
+			<a class="button" href="{{ hero.ctaPrimary.url }}" rel="noopener noreferrer">{{ hero.ctaPrimary.label }}</a>
+			<a class="button button--secondary" href="{{ hero.ctaSecondary.url }}">{{ hero.ctaSecondary.label }}</a>
 		</div>
 	</div>
 </section>
@@ -18,17 +18,17 @@
 <section class="section" id="book">
 	<div class="section-inner split">
 		<div>
-			<p class="section-label">The Book</p>
-			<h2>Inside the <span>Black Box</span></h2>
-			<p>Wild Globalization explores five primal forces-energies that drive and produce civilization. We may observe what comes out, but what happens inside that spontaneously evolving entanglement surpasses complete understanding. It's wild.</p>
-			<a class="button" href="https://wildglobalization.com/" rel="noopener noreferrer">Order the Book</a>
+			<p class="section-label">{{ book.label }}</p>
+			<h2>{{ book.title | safe }}</h2>
+			<div class="markdown">{{ book.body | md | safe }}</div>
+			<a class="button" href="{{ book.cta.url }}" rel="noopener noreferrer">{{ book.cta.label }}</a>
 		</div>
 		<div class="book-cover">
-			<img src="{{ home.images.book }}" alt="Wild Globalization book cover">
+			<img src="{{ book.coverImage }}" alt="{{ book.coverAlt }}">
 		</div>
 	</div>
 	<div class="section-inner force-grid">
-		{% for force in home.forces %}
+		{% for force in forces %}
 			<article class="force-card">
 				<div class="force-card__icon">{{ force.icon }}</div>
 				<p class="force-card__label">{{ force.label }}</p>
@@ -40,20 +40,20 @@
 	</div>
 	<div class="section-inner">
 		<figure class="image-banner">
-			<img src="{{ home.images.port }}" alt="Massive shipping port at golden hour - the scale of global trade">
-			<figcaption>"History's flow accelerates ahead of our practical and ethical responses."</figcaption>
+			<img src="{{ book.bannerImage }}" alt="{{ book.bannerAlt }}">
+			<figcaption>{{ book.bannerCaption }}</figcaption>
 		</figure>
 	</div>
 </section>
 
 <section class="section section--muted" id="about">
 	<div class="section-inner section-heading">
-		<p class="section-label">About the Work</p>
-		<h2>More Provocateur <span>than Scholar</span></h2>
-		<p>Wild Globalization doesn't offer easy ideology. It's a siren for critical thinking, dwelling in questions and wonderment rather than formal account, building its perspective from both the miracles and horrors of humankind.</p>
+		<p class="section-label">{{ about.label }}</p>
+		<h2>{{ about.title | safe }}</h2>
+		<div class="markdown">{{ about.body | md | safe }}</div>
 	</div>
 	<div class="section-inner about-grid">
-		{% for card in home.aboutCards %}
+		{% for card in about.cards %}
 			<article>
 				<div class="about-grid__icon">{{ card.icon }}</div>
 				<h3>{{ card.title }}</h3>
@@ -62,34 +62,32 @@
 		{% endfor %}
 	</div>
 	<blockquote class="section-inner pullquote">
-		<p>"Can we turn our incessantly creative-destructive and emerging hyper-tech nature back on itself to gain new comparative advantages? How can we, in the 21st century, regain practical advantage for our own - and the Earth's - precarious endurance?"</p>
+		<div class="markdown">{{ about.pullquote | md | safe }}</div>
 		<cite>Wild Globalization</cite>
 	</blockquote>
 </section>
 
 <section class="section" id="author">
 	<div class="section-inner section-rule">
-		<p class="section-label">The Author</p>
+		<p class="section-label">{{ author.label }}</p>
 	</div>
 	<div class="section-inner author-card">
 		<div class="author-card__media">
-			<img src="{{ home.images.author }}" alt="Author of Wild Globalization">
-			<p><strong>The Wild Globalization Project</strong><span>Pan-historical analysis</span></p>
+			<img src="{{ author.image }}" alt="{{ author.imageAlt }}">
+			<p><strong>{{ author.orgName }}</strong><span>{{ author.orgRole }}</span></p>
 		</div>
 		<div class="author-card__body">
-			<h2>The Wild <span>Globalization</span><br>Project</h2>
-			<p class="kicker">Author &amp; Thought Provocateur</p>
-			<p>Wild Globalization speaks more like a <strong>provocateur than a scholar</strong>, a siren for critical thinking over ideology, dwelling in questions and wonderment rather than formal account.</p>
-			<p>Drawing from paleoecology, economic history, technology theory, and governance across civilizations, the work builds its perspective simultaneously from the miracles and the horrors of the human story.</p>
-			<p>At its core, it challenges all current governances, of every ideology, and their relentless advances into the externalities of massive public debt.</p>
+			<h2>{{ author.title | safe }}</h2>
+			<p class="kicker">{{ author.kicker }}</p>
+			<div class="markdown">{{ author.body | md | safe }}</div>
 			<div class="stats">
-				<p><strong>5</strong><span>Wild Forces</span></p>
-				<p><strong>250K</strong><span>Years of History</span></p>
-				<p><strong>1</strong><span>Bold Thesis</span></p>
+				{% for stat in author.stats %}
+				<p><strong>{{ stat.value }}</strong><span>{{ stat.label }}</span></p>
+				{% endfor %}
 			</div>
 			<div class="actions">
-				<a class="button" href="https://wildglobalization.com/" rel="noopener noreferrer">Visit the Full Site</a>
-				<a class="button button--secondary" href="#book">Explore the Forces</a>
+				<a class="button" href="{{ author.ctaPrimary.url }}" rel="noopener noreferrer">{{ author.ctaPrimary.label }}</a>
+				<a class="button button--secondary" href="{{ author.ctaSecondary.url }}">{{ author.ctaSecondary.label }}</a>
 			</div>
 		</div>
 	</div>

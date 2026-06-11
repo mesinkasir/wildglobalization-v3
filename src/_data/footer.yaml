@@ -1,0 +1,25 @@
+brand:
+  primary: "Wild"
+  secondary: "Globalization"
+  description: "A pan-historical exploration of the five wild forces driving our hyper-globalizing civilization."
+  cta:
+    label: "Buy the Book"
+    url: "https://wildglobalization.com/"
+
+navigateTitle: "Navigate"
+fiveForcesTitle: "Five Forces"
+fiveForces:
+  - label: "Wild Ecology"
+    href: "/wild-ecology/"
+  - label: "Wild Culture"
+    href: "/wild-sex/"
+  - label: "Wild Technology"
+    href: "/wild-tech/"
+  - label: "Wild Economy"
+    href: "/wild-value/"
+  - label: "Wild Governance"
+    href: "/wild-governance/"
+
+copyright:
+  owner: "The Wild Globalization Project"
+  rights: "All rights reserved."

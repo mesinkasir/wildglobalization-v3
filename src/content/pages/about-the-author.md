@@ -13,12 +13,14 @@ timelineCategory: "author"
 timelineOrder: 90
 showInPagesNav: true
 showInTimeline: true
+show_toc: true
 ---
 Gary Bedford is *Wild Globalization’s* author and primary contributor.
 
 <figure class="wp-block-image size-large">
 <img src="/assets/img/2022/07/GSB-Vail-Retreat-7-2021-1024x683.jpeg" class="wp-image-704" loading="lazy" decoding="async" srcset="/assets/img/2022/07/GSB-Vail-Retreat-7-2021-1024x683.jpeg 1024w, /assets/img/2022/07/GSB-Vail-Retreat-7-2021-300x200.jpeg 300w, /assets/img/2022/07/GSB-Vail-Retreat-7-2021-768x512.jpeg 768w, /assets/img/2022/07/GSB-Vail-Retreat-7-2021-1536x1024.jpeg 1536w, /assets/img/2022/07/GSB-Vail-Retreat-7-2021-2048x1366.jpeg 2048w, /assets/img/2022/07/GSB-Vail-Retreat-7-2021-360x240.jpeg 360w" sizes="auto, (max-width: 1024px) 100vw, 1024px" width="1024" height="683" />
 </figure>
+
 
 Gary has studied “globalization” since first living abroad (Tromsø, Norway, 1970-1971) and, later, as part of a unique world tour led by the eminent faith traditions scholar, Huston Smith, (International Honors Program, 1976-1977). The group studied and lived in the religious and cultural traditions of Islam (Fes, Morocco; Isfahan, Iran), Judeo-Christianity (Israel), Hinduism (Benares, India), and Buddhism (Benares, India, Kathmandu, Nepal; Candy, Sri Lanka; Hong Kong; Kyoto, Japan). His early curiosity about globalization “peaked” during a 5-week solo-trek studying Nepal’s Hindu and Buddhist backcountry, including the summiting of Kala Patthar, below.
 
