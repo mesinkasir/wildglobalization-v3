@@ -1,8 +1,0 @@
-/* TEAM */
-Project: Wild Globalization
-Site: https://wildglobalization.com/
-
-/* SITE */
-Generator: Eleventy 3.1.6
-Foundation: @apleasantview/eleventy-plugin-baseline
-Feeds: /feed/feed.xml, /feed/feed.rss, /feed/feed.json, /feed/feed.txt, /feed/twtxt.txt
