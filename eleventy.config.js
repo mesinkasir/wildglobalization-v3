@@ -7,7 +7,7 @@ import markdownItAttrs from "markdown-it-attrs";
 import markdownItFootnote from "markdown-it-footnote";
 import pluginTOC from 'eleventy-plugin-toc';
 import { IdAttributePlugin } from '@11ty/eleventy'; 
-
+import { execSync } from 'child_process';
 const siteUrl = settings.url.replace(/\/$/, '');
 
 function absoluteUrl(path = '/') {
@@ -114,6 +114,10 @@ export default async function (eleventyConfig) {
 				return orderA - orderB || a.data.title.localeCompare(b.data.title);
 			});
 	});
+
+	 eleventyConfig.on('eleventy.after', () => {
+    execSync(`npx pagefind --source _site --glob "**/*.html"`, { encoding: 'utf-8' });
+  });
 
 	eleventyConfig.setLibrary("md", markdownLib);
 
