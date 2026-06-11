@@ -5,9 +5,6 @@ layout: layouts/page.njk
 permalink: /search/
 ---
 
-<link href="/pagefind/pagefind-ui.css" rel="stylesheet">
-<script src="/pagefind/pagefind-ui.js"></script>
-<div id="search"></div>
-<script>
-    new PagefindUI({ element: "#search", showSubResults: true });
-</script>
+<link href="/pagefind/pagefind-component-ui.css" rel="stylesheet">
+<script src="/pagefind/pagefind-component-ui.js" defer></script>
+<pagefind-searchbox show-sub-results></pagefind-searchbox>
